@@ -6,4 +6,5 @@
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Regiments, "Regiments" );
 
 DEFINE_LOG_CATEGORY(LogRegiments)
+DEFINE_LOG_CATEGORY(LogSystems);
  

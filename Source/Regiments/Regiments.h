@@ -5,3 +5,4 @@
 #include "CoreMinimal.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogRegiments, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(LogSystems, Display, All);
