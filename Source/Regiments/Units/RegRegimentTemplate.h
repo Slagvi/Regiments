@@ -12,6 +12,7 @@ class URegRegimentTemplate : public UObject
 {
 	GENERATED_BODY()
 
+public:
 	UPROPERTY(EditDefaultsOnly)
 	int32 MaxUnitsNum;
 
@@ -23,6 +24,9 @@ class URegRegimentTemplate : public UObject
 
 	UPROPERTY(EditDefaultsOnly)
 	float MaxSpeed;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<FTransform> DefaultFormation;
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<AActor> SoldierClass;

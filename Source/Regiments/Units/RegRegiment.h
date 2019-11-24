@@ -15,14 +15,21 @@ class ARegRegiment : public AActor
 {
 	GENERATED_BODY()
 
+	ARegRegiment();
+
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf <URegRegimentTemplate> TemplateType;
+
+	UPROPERTY(EditAnywhere)
+	FTransform TargetTransform;
 
 protected:
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	virtual void Tick(float DeltaTime) override;
 
-	virtual void RecreateSoldiers();
+	virtual void RecreateSoldiers(FTransform StartTransform);
+	virtual void UpdateSoldiersMovement(float DeltaTime);
 
 	UPROPERTY()
 	TArray<AActor *> DisplayedSoldiers;
@@ -31,4 +38,7 @@ protected:
 	URegRegimentTemplate* Template;
 
 	FRegRegimentState State;
+
+private:
+	FVector GetRegimentLocation();
 };
