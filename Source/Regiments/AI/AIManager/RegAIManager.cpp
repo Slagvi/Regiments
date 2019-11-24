@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h" // just for logging
 
+
 RegAIManager::~RegAIManager()
 {
 	UE_LOG(LogTemp, Display, TEXT("AI Manager destroyed "));
